@@ -10,7 +10,7 @@
 
 - 👯 Estou colaborando para pequenos projetos **Banco de dados**
 
-- 💬 Pergunte-me sobre ** Python **
+- 💬 Pergunte-me sobre **Python**
 
 - 📫 Como chegar até mim **otniel.g.andrade@gmail.com**
 
