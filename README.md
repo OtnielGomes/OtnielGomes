@@ -8,7 +8,7 @@
 
 - 🌱 Estou estudando **Python, MySQL**
 
-- 👯 Estou colaborando para pequenos projetos **Banco de dados**
+- 👯 Estou testando e criando projetos de **Banco de dados**
 
 - 💬 Pergunte-me sobre **Python**
 
