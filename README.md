@@ -6,9 +6,9 @@
 
 - 🔭 Atualmente trabalho na [RaiaDrogasil](https://rd.com.br/)
 
-- 🌱 Estou estudando **Python, SQL, Machine Learning e Data Science**
+- 🌱 Estou estudando **Python, Machine Learning e Data Science, SQL**
 
-- 👯 Estou testando e criando  pequenos projetos de **Banco de dados**
+- 👯 Estou testando e criando  pequenos projetos de **Machine Learning**
 
 - 💬 Pergunte-me sobre **Python**
 
