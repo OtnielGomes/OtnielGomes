@@ -15,10 +15,21 @@
 
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/otniel-gomes-6a044b282/)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/otnielgomes/)
-
-![OtnielGomesGitHub stats](https://github-readme-stats.vercel.app/api?username=OtnielGomes&theme=blue-green)
-![OtnielGomesGitHub stats](https://github-readme-stats.vercel.app/api/top-langs/?username=OtnielGomes&theme=blue-green)
 <img align="right" alt="Coding" width="400" src="https://miro.medium.com/max/680/0*7Q3yvSIv_t0ioJ-Z.gif"/>
+ <picture>
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=otnielgomes_icons=true&theme=dark"
+    media="(prefers-color-scheme: dark)"
+  />
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=otnielgomes&show_icons=true"
+    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+  />
+  <img src="https://github-readme-stats.vercel.app/api?username=otnielgomes&show_icons=true" />
+</picture>
+
+
+![OtnielGomesGitHub stats](https://github-readme-stats.vercel.app/api/top-langs/?username=OtnielGomes&theme=blue-green)
 
 
 ## Tecnologias que uso no meu dia:
@@ -35,5 +46,3 @@
   <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white"/>
   <img align="center" alt="Pycharm" src="https://img.shields.io/badge/PyCharm-000000.svg?&style=for-the-badge&logo=PyCharm&logoColor=white"/>
 </div><br/>
-
-
