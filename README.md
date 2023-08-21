@@ -18,6 +18,8 @@
 
 ![OtnielGomesGitHub stats](https://github-readme-stats.vercel.app/api?username=OtnielGomes&theme=blue-green)
 ![OtnielGomesGitHub stats](https://github-readme-stats.vercel.app/api/top-langs/?username=OtnielGomes&theme=blue-green)
+<img align="right" alt="Coding" width="400" src="https://miro.medium.com/max/680/0*7Q3yvSIv_t0ioJ-Z.gif"/>
+
 
 ## Tecnologias que uso no meu dia:
 <div style="display: inline_block"><br/>
