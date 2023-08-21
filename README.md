@@ -1,6 +1,6 @@
 <h1 align="center">Olá 👋, Sou o Otniel Gomes</h1>
 <h3 align="center">Sou Estudante de Engenharia de Software</h3>
-
+<img align="right" alt="Coding" width="400" src="https://miro.medium.com/max/680/0*7Q3yvSIv_t0ioJ-Z.gif"/>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=OtnielGomes&label=Profile%20views&color=0e75b6&style=flat" alt="kimjayden" /> </p>
 
 - 🔭 Atualmente trabalho na [RaiaDrogasil](https://rd.com.br/)
@@ -15,7 +15,6 @@
 
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/otniel-gomes-6a044b282/)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/otnielgomes/)
-<img align="right" alt="Coding" width="400" src="https://miro.medium.com/max/680/0*7Q3yvSIv_t0ioJ-Z.gif"/>
  <picture>
   <source
     srcset="https://github-readme-stats.vercel.app/api?username=otnielgomes_icons=true&theme=dark"
@@ -28,9 +27,7 @@
   <img src="https://github-readme-stats.vercel.app/api?username=otnielgomes&show_icons=true" />
 </picture>
 
-
 ![OtnielGomesGitHub stats](https://github-readme-stats.vercel.app/api/top-langs/?username=OtnielGomes&theme=blue-green)
-
 
 ## Tecnologias que uso no meu dia:
 <div style="display: inline_block"><br/>
