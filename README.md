@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Otniel Gomes</h1>
-<h3 align="center">Software Engineering Student</h3>
+<h3 align="center">Data Scientist</h3>
 <img align="right" alt="Coding" width="400" src="https://miro.medium.com/max/680/0*7Q3yvSIv_t0ioJ-Z.gif"/>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=OtnielGomes&label=Profile%20views&color=0e75b6&style=flat" alt="kimjayden" /> </p>
 
