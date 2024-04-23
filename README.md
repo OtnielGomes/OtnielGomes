@@ -5,7 +5,7 @@
 
 - 🔭 I currently work at [RaiaDrogasil](https://rd.com.br/)
 
-- 🌱 I am studying **PySpark, Python, Machine Learning e Data Science**
+- 🌱 I am studying **PyTorch, PySpark, Python, Machine Learning and Data Science**
 
 - 👯 I'm testing and creating some projects **Machine Learning**
 
