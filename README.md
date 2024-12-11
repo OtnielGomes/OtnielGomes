@@ -7,7 +7,7 @@
 
 - 🌱 I am studying **PyTorch, PySpark, Python, Machine Learning and Data Science**
 
-- 👯 I'm testing and creating projects **Machine Learning**
+- 👯 I'm testing and creating projects **Data Science**
 
 - 📫 How to reach me **otniel.g.andrade@gmail.com**
 
