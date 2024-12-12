@@ -11,6 +11,11 @@
 
 - 📫 How to reach me **otniel.g.andrade@gmail.com**
 
+- ### [**Data Science Portfolio**](https://github.com/OtnielGomes/Data_Science_Portfolio) :game_die:
+
+  - It is under development. Initially, you will find business cases solved with exploratory data analysis, classification problem solving, machine learning and neural networks.
+  - [Click here to see my data science portfolio](https://github.com/OtnielGomes/Data_Science_Portfolio)
+
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/otnielgomes/)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/otnielgomes/)
  <picture>
@@ -44,10 +49,6 @@
 [![PW][PowerBI]][PowerBI-url]
 [![Ray][Ray Tune]][Ray Tune-url]
 
-## [**Data Science Portfolio**](https://github.com/OtnielGomes/Data_Science_Portfolio) :game_die:
-
-- Check out my data science portfolio. There, you will find solved business cases involving machine learning classification, regression, and clustering, as well as exploratory data analysis and other projects within the data environment.
-- [Click here to see my data science portfolio](https://github.com/OtnielGomes/Data_Science_Portfolio)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
