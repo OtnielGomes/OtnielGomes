@@ -9,7 +9,7 @@
 
   [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/otnielgomes/)
   [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/otnielgomes/)
-  [![Portfolio](https://img.shields.io/badge/Portfolio-AI%20Engineer-1f425f?style=for-the-badge&logo=github)](https://github.com/OtnielGomes/Data_Science_Portfolio)
+  [![Portfolio](https://img.shields.io/badge/Portfolio-AI%20Engineer-1f425f?style=for-the-badge&logo=github)](https://github.com/OtnielGomes/Portifolio--AI-Engineering--Data-Science/tree/main)
 
 </div>
 
