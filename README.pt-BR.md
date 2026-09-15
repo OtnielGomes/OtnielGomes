@@ -1,15 +1,15 @@
 # Otniel Gomes
 
-**AI Engineer** — I build and evaluate LLM systems with measurable quality, latency, and observability.
+**AI Engineer** — eu construo e avalio sistemas com LLM com qualidade, latência e observabilidade mensuráveis.
 
 <p align="center">
-  <strong>Language:</strong> English | <a href="README.pt-BR.md">Português</a>
+  <strong>Idioma:</strong> <a href="README.md">English</a> | Português
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/otnielgomes/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:otniel.g.andrade@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://github.com/OtnielGomes/Portifolio--AI-Engineering--Data-Science"><img src="https://img.shields.io/badge/Case_studies-portfolio-1f425f?style=for-the-badge&logo=github" alt="Portfolio" /></a>
+  <a href="https://github.com/OtnielGomes/Portifolio--AI-Engineering--Data-Science"><img src="https://img.shields.io/badge/Estudos_de_caso-portfólio-1f425f?style=for-the-badge&logo=github" alt="Portfólio" /></a>
 </p>
 
 <p align="center">
@@ -18,38 +18,38 @@
   <a href="https://docs.ragas.io/"><img src="https://img.shields.io/badge/RAGAS-evaluation-6366F1?style=for-the-badge" alt="RAGAS" /></a>
 </p>
 
-## About
+## Sobre
 
-I design LLM-powered systems so the interesting claims can be checked: retrieval quality, policy compliance, and latency — not only a demo chat. Business rules live in **code**; prompts handle language and reasoning, not enforcement.
+Eu desenho sistemas com LLM para que as afirmações importantes possam ser checadas: qualidade da recuperação, cumprimento de política e latência — não só um chat de demonstração. Regras de negócio ficam no **código**; prompts guiam linguagem e raciocínio, não a aplicação das regras.
 
-Currently at [RD Saúde](https://rd.com.br/). Open to **AI Engineering**, **LLM systems**, and applied Generative AI roles.
+Atualmente na [RD Saúde](https://rd.com.br/). Aberto a papéis de **AI Engineering**, **sistemas com LLM** e Generative AI aplicada.
 
 > [!TIP]
-> Architecture diagrams, screenshots, and longer write-ups live in the [case-study portfolio](https://github.com/OtnielGomes/Portifolio--AI-Engineering--Data-Science). This profile is the index.
+> Diagramas, screenshots e textos longos ficam no [portfólio de estudos de caso](https://github.com/OtnielGomes/Portifolio--AI-Engineering--Data-Science). Este perfil é o índice.
 
-## How I work
+## Como eu trabalho
 
-| Practice | What it means in a system |
+| Prática | O que isso significa no sistema |
 |---|---|
-| **Evaluation before intuition** | Compare prompting and retrieval with RAGAS, BLEU/ROUGE, and LLM-as-Judge instead of picking a stack by feel. |
-| **Observability** | Trace every LLM and tool call (LangSmith, Langfuse, OpenTelemetry) so quality and latency are inspectable. |
-| **Code vs LLM boundary** | Policy engines, schemas, and databases own refunds, windows, and order facts. The model does not invent state. |
-| **Retrieval as a measured pipeline** | Naive, HyDE, and reranking are compared on the same corpus — extra hops have to earn their cost. |
-| **Graphs when the problem needs them** | LangGraph for state, tools, escalation, and human-in-the-loop. Complexity follows the problem, not the framework. |
+| **Avaliação antes da intuição** | Comparar prompting e recuperação com RAGAS, BLEU/ROUGE e LLM-as-Judge, em vez de escolher o stack no feeling. |
+| **Observabilidade** | Rastrear cada chamada de LLM e de ferramenta (LangSmith, Langfuse, OpenTelemetry) para inspecionar qualidade e latência. |
+| **Fronteira código vs LLM** | Motores de política, schemas e bancos donos de reembolsos, prazos e fatos do pedido. O modelo não inventa estado. |
+| **Recuperação como pipeline medido** | Naive, HyDE e reranking comparados no mesmo corpus — hops extras precisam justificar o custo. |
+| **Grafos quando o problema pede** | LangGraph para estado, ferramentas, escalação e human-in-the-loop. Complexidade segue o problema, não o framework. |
 
-## Featured work
+## Trabalho em destaque
 
 ### [AI Customer Support Platform](https://github.com/OtnielGomes/AI-Customer-Support-Platform-With-Langgraph)
 
 [![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/langgraph) [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://github.com/pgvector/pgvector)
 
-**Problem:** Answer questions about real orders without hallucinating, and escalate when policy forbids acting.
+**Problema:** Responder sobre pedidos reais sem alucinar, e escalar quando a política impede agir.
 
-**Solution:** A LangGraph supervisor routes each ticket to billing, logistics, or account workers. Those workers read order facts from PostgreSQL, retrieve procedures through RAG over pgvector, and run a deterministic policy engine before any refund or cancellation.
+**Solução:** Um supervisor LangGraph encaminha cada ticket para agentes de billing, logística ou conta. Esses agentes leem fatos do pedido no PostgreSQL, recuperam procedimentos via RAG em pgvector e passam por um motor de política determinístico antes de qualquer reembolso ou cancelamento.
 
-**Result:** Customer Portal and Support Console deployed on DigitalOcean App Platform, with OpenTelemetry and Langfuse tracing. Unit and integration suites currently pass **160 tests** at about **70%** coverage. Unauthorized refunds stay blocked in code.
+**Resultado:** Portal do cliente e console de suporte no DigitalOcean App Platform, com traces em OpenTelemetry e Langfuse. Suítes unitárias e de integração passam **160 testes** com cerca de **70%** de cobertura. Reembolsos fora da política ficam bloqueados no código.
 
-**[Repository](https://github.com/OtnielGomes/AI-Customer-Support-Platform-With-Langgraph)**
+**[Repositório](https://github.com/OtnielGomes/AI-Customer-Support-Platform-With-Langgraph)**
 
 ---
 
@@ -57,13 +57,13 @@ Currently at [RD Saúde](https://rd.com.br/). Open to **AI Engineering**, **LLM 
 
 [![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/langgraph) [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 
-**Problem:** Researching a topic, reading the inbox, and sending a reply is slow when it is done by hand every time.
+**Problema:** Pesquisar um tema, ler a caixa de entrada e enviar a resposta é lento quando isso é feito à mão toda vez.
 
-**Solution:** A LangGraph supervisor routes work to a research agent and an email agent (Gmail IMAP/SMTP). FastAPI serves the API, PostgreSQL keeps chat history, Streamlit is the UI — packaged with Docker Compose.
+**Solução:** Um supervisor LangGraph distribui o trabalho entre um agente de pesquisa e um agente de e-mail (Gmail IMAP/SMTP). FastAPI serve a API, PostgreSQL guarda o histórico, Streamlit é a interface — empacotado com Docker Compose.
 
-**Result:** Deployed on DigitalOcean App Platform as API, Streamlit UI, and managed PostgreSQL.
+**Resultado:** Publicado no DigitalOcean App Platform como API, UI Streamlit e PostgreSQL gerenciado.
 
-**[Repository](https://github.com/OtnielGomes/AI-Agent-with-Docker-Containers-and-Python)**
+**[Repositório](https://github.com/OtnielGomes/AI-Agent-with-Docker-Containers-and-Python)**
 
 ---
 
@@ -71,13 +71,13 @@ Currently at [RD Saúde](https://rd.com.br/). Open to **AI Engineering**, **LLM 
 
 [![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)](https://ollama.com/) [![ChromaDB](https://img.shields.io/badge/ChromaDB-F97316?style=flat-square)](https://www.trychroma.com/) [![RAGAS](https://img.shields.io/badge/RAGAS-6366F1?style=flat-square)](https://docs.ragas.io/) [![LangSmith](https://img.shields.io/badge/LangSmith-FF6B35?style=flat-square)](https://smith.langchain.com/)
 
-**Problem:** Prompting and RAG strategies are often chosen by intuition, then defended after the fact.
+**Problema:** Estratégias de prompting e RAG costumam ser escolhidas por intuição e justificadas depois.
 
-**Solution:** A benchmark that compares Zero-Shot, Few-Shot, and Chain-of-Thought against Naive, HyDE, and reranking retrieval, scored with BLEU, ROUGE, LLM-as-Judge, and RAGAS. Hybrid inference: Ollama Cloud for generation and judging, local embeddings, ChromaDB, traces in LangSmith.
+**Solução:** Um benchmark que compara Zero-Shot, Few-Shot e Chain-of-Thought com recuperação Naive, HyDE e reranking, pontuado com BLEU, ROUGE, LLM-as-Judge e RAGAS. Inferência híbrida: Ollama Cloud para geração e juiz, embeddings locais, ChromaDB, traces no LangSmith.
 
-**Result:** Best composite RAGAS **0.988** with HyDE on Gemma3 27B. Best prompting mean accuracy **89.3%** with Qwen3-Coder 480B. Naive RAG stayed competitive on cost; HyDE collapsed on the weakest model.
+**Resultado:** Melhor RAGAS composto **0.988** com HyDE no Gemma3 27B. Melhor acurácia média de prompting **89.3%** com Qwen3-Coder 480B. Naive RAG continuou competitivo em custo; HyDE colapsou no modelo mais fraco.
 
-**[Repository](https://github.com/OtnielGomes/LLM-Eval-Suite)**
+**[Repositório](https://github.com/OtnielGomes/LLM-Eval-Suite)**
 
 ---
 
@@ -85,35 +85,35 @@ Currently at [RD Saúde](https://rd.com.br/). Open to **AI Engineering**, **LLM 
 
 [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/) [![ChromaDB](https://img.shields.io/badge/ChromaDB-F97316?style=flat-square)](https://www.trychroma.com/) [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/) [![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)](https://ollama.com/)
 
-**Problem:** Question answering over PDFs fails when the model answers from memory instead of the file.
+**Problema:** Perguntas sobre PDFs falham quando o modelo responde de memória em vez de responder a partir do arquivo.
 
-**Solution:** PyMuPDF extraction, chunking, embeddings in ChromaDB, and LangChain generation with prompt rules that keep answers tied to retrieved passages. Local embeddings (`mxbai-embed-large`) and a cloud or local generation path through Ollama.
+**Solução:** Extração com PyMuPDF, chunking, embeddings no ChromaDB e geração via LangChain com regras de prompt que amarram a resposta aos trechos recuperados. Embeddings locais (`mxbai-embed-large`) e geração na nuvem ou 100% local via Ollama.
 
-**Result:** Streamlit app that surfaces latency next to each answer, plus a fully local fallback so the pipeline can run without a cloud LLM.
+**Resultado:** App Streamlit que mostra a latência junto de cada resposta, com fallback local para o pipeline rodar sem LLM na nuvem.
 
-**[Repository](https://github.com/OtnielGomes/Document-Rag-Agent)**
+**[Repositório](https://github.com/OtnielGomes/Document-Rag-Agent)**
 
 ## Stack
 
-**Orchestration & serving**
+**Orquestração e serving**
 
 [![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/langgraph) [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/) [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 
-**Retrieval**
+**Recuperação**
 
 [![PostgreSQL](https://img.shields.io/badge/pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://github.com/pgvector/pgvector) [![ChromaDB](https://img.shields.io/badge/ChromaDB-F97316?style=flat-square)](https://www.trychroma.com/) [![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/)
 
-**Evaluation & observability**
+**Avaliação e observabilidade**
 
 [![RAGAS](https://img.shields.io/badge/RAGAS-6366F1?style=flat-square)](https://docs.ragas.io/) [![LangSmith](https://img.shields.io/badge/LangSmith-FF6B35?style=flat-square)](https://smith.langchain.com/) [![Pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)](https://docs.pytest.org/) [![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat-square&logo=astral&logoColor=white)](https://docs.astral.sh/uv/)
 
-Background in modeling and data platforms (PyTorch, scikit-learn, Spark, Databricks) sits behind this work; it is not the focus of this profile.
+Há um background em modelagem e plataformas de dados (PyTorch, scikit-learn, Spark, Databricks); não é o foco deste perfil.
 
-## Contact
+## Contato
 
 **Otniel Gomes** — AI Engineer · Bauru, SP
 
-- Email: [otniel.g.andrade@gmail.com](mailto:otniel.g.andrade@gmail.com)
+- E-mail: [otniel.g.andrade@gmail.com](mailto:otniel.g.andrade@gmail.com)
 - LinkedIn: [linkedin.com/in/otnielgomes](https://www.linkedin.com/in/otnielgomes/)
 - GitHub: [@OtnielGomes](https://github.com/OtnielGomes)
-- Case studies: [Portifolio--AI-Engineering--Data-Science](https://github.com/OtnielGomes/Portifolio--AI-Engineering--Data-Science)
+- Estudos de caso: [Portifolio--AI-Engineering--Data-Science](https://github.com/OtnielGomes/Portifolio--AI-Engineering--Data-Science)

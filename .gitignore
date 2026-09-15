@@ -1,0 +1,4 @@
+# Cursor / agent tooling (local only)
+.agents/
+.cursor/
+skills-lock.json
