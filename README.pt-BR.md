@@ -36,6 +36,7 @@ Atualmente na [RD Saúde](https://rd.com.br/). Aberto a papéis de **AI Engineer
 | **Fronteira código vs LLM** | Motores de política, schemas e bancos donos de reembolsos, prazos e fatos do pedido. O modelo não inventa estado. |
 | **Recuperação como pipeline medido** | Naive, HyDE e reranking comparados no mesmo corpus — hops extras precisam justificar o custo. |
 | **Grafos quando o problema pede** | LangGraph para estado, ferramentas, escalação e human-in-the-loop. Complexidade segue o problema, não o framework. |
+| **Resposta ancorada ou nenhuma** | Um gate de citação determinístico descarta o que o corpus não sustenta. A resposta vira uma recusa explícita, em vez de uma paráfrase confiante. |
 
 ## Trabalho em destaque
 
@@ -45,7 +46,7 @@ Atualmente na [RD Saúde](https://rd.com.br/). Aberto a papéis de **AI Engineer
 
 **Problema:** Responder sobre pedidos reais sem alucinar, e escalar quando a política impede agir.
 
-**Solução:** Um supervisor LangGraph encaminha cada ticket para agentes de billing, logística ou conta. Esses agentes leem fatos do pedido no PostgreSQL, recuperam procedimentos via RAG em pgvector e passam por um motor de política determinístico antes de qualquer reembolso ou cancelamento.
+**Solução:** O TechStore Support usa um supervisor LangGraph que encaminha cada ticket para agentes de billing, logística ou conta. Esses agentes leem fatos do pedido no PostgreSQL, recuperam procedimentos via RAG em pgvector e passam por um motor de política determinístico antes de qualquer reembolso ou cancelamento.
 
 **Resultado:** Portal do cliente e console de suporte no DigitalOcean App Platform, com traces em OpenTelemetry e Langfuse. Suítes unitárias e de integração passam **160 testes** com cerca de **70%** de cobertura. Reembolsos fora da política ficam bloqueados no código.
 
@@ -67,6 +68,20 @@ Atualmente na [RD Saúde](https://rd.com.br/). Aberto a papéis de **AI Engineer
 
 ---
 
+### [PGD Teletrabalho](https://github.com/OtnielGomes/Enterprise-Knowledge---RAG-Platform)
+
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/) [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/features/actions)
+
+**Problema:** Um servidor que pergunta sobre regras de teletrabalho precisa do ato que está de fato em vigor, com um artigo que ele possa abrir — não uma paráfrase confiante.
+
+**Solução:** O Ask recupera artigos de um snapshot datado de cinco atos normativos, redige a resposta e passa por um gate de citação determinístico que só mantém citações cujo artigo foi recuperado. Perguntas sem suporte voltam como Evidência Insuficiente. Atos vigentes e históricos ficam separados; emendas nunca são consolidadas em silêncio.
+
+**Resultado:** **89** testes pytest passando com o rascunho extrativo e chave de API vazia, incluindo um golden set anotado por humano com **43** itens. Corte do corpus: **18 de setembro de 2026**. A CI roda o mesmo golden set a cada push.
+
+**[Repositório](https://github.com/OtnielGomes/Enterprise-Knowledge---RAG-Platform)**
+
+---
+
 ### [LLM-Eval-Suite](https://github.com/OtnielGomes/LLM-Eval-Suite)
 
 [![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)](https://ollama.com/) [![ChromaDB](https://img.shields.io/badge/ChromaDB-F97316?style=flat-square)](https://www.trychroma.com/) [![RAGAS](https://img.shields.io/badge/RAGAS-6366F1?style=flat-square)](https://docs.ragas.io/) [![LangSmith](https://img.shields.io/badge/LangSmith-FF6B35?style=flat-square)](https://smith.langchain.com/)
@@ -81,23 +96,11 @@ Atualmente na [RD Saúde](https://rd.com.br/). Aberto a papéis de **AI Engineer
 
 ---
 
-### [Document RAG Agent](https://github.com/OtnielGomes/Document-Rag-Agent)
-
-[![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/) [![ChromaDB](https://img.shields.io/badge/ChromaDB-F97316?style=flat-square)](https://www.trychroma.com/) [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/) [![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)](https://ollama.com/)
-
-**Problema:** Perguntas sobre PDFs falham quando o modelo responde de memória em vez de responder a partir do arquivo.
-
-**Solução:** Extração com PyMuPDF, chunking, embeddings no ChromaDB e geração via LangChain com regras de prompt que amarram a resposta aos trechos recuperados. Embeddings locais (`mxbai-embed-large`) e geração na nuvem ou 100% local via Ollama.
-
-**Resultado:** App Streamlit que mostra a latência junto de cada resposta, com fallback local para o pipeline rodar sem LLM na nuvem.
-
-**[Repositório](https://github.com/OtnielGomes/Document-Rag-Agent)**
-
 ## Stack
 
 **Orquestração e serving**
 
-[![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/langgraph) [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/) [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/langgraph) [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/) [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/) [![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)](https://redis.io/) [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/features/actions)
 
 **Recuperação**
 
@@ -105,7 +108,7 @@ Atualmente na [RD Saúde](https://rd.com.br/). Aberto a papéis de **AI Engineer
 
 **Avaliação e observabilidade**
 
-[![RAGAS](https://img.shields.io/badge/RAGAS-6366F1?style=flat-square)](https://docs.ragas.io/) [![LangSmith](https://img.shields.io/badge/LangSmith-FF6B35?style=flat-square)](https://smith.langchain.com/) [![Pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)](https://docs.pytest.org/) [![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat-square&logo=astral&logoColor=white)](https://docs.astral.sh/uv/)
+[![RAGAS](https://img.shields.io/badge/RAGAS-6366F1?style=flat-square)](https://docs.ragas.io/) [![LangSmith](https://img.shields.io/badge/LangSmith-FF6B35?style=flat-square)](https://smith.langchain.com/) [![Langfuse](https://img.shields.io/badge/Langfuse-F4B942?style=flat-square)](https://langfuse.com/) [![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-425CC7?style=flat-square&logo=opentelemetry&logoColor=white)](https://opentelemetry.io/) [![Pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)](https://docs.pytest.org/) [![uv](https://img.shields.io/badge/uv-DE5FE9?style=flat-square&logo=astral&logoColor=white)](https://docs.astral.sh/uv/)
 
 Há um background em modelagem e plataformas de dados (PyTorch, scikit-learn, Spark, Databricks); não é o foco deste perfil.
 
