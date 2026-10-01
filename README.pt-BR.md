@@ -56,13 +56,13 @@ Atualmente na [RD Saúde](https://rd.com.br/). Aberto a papéis de **AI Engineer
 
 ### [AI Agent with Docker, LangGraph & Email](https://github.com/OtnielGomes/AI-Agent-with-Docker-Containers-and-Python)
 
-[![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/langgraph) [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/langgraph) [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 
-**Problema:** Pesquisar um tema, ler a caixa de entrada e enviar a resposta é lento quando isso é feito à mão toda vez.
+**Problema:** Ler a caixa e responder à mão é lento, e o assistente não deve ser quem dispara o envio.
 
-**Solução:** Um supervisor LangGraph distribui o trabalho entre um agente de pesquisa e um agente de e-mail (Gmail IMAP/SMTP). FastAPI serve a API, PostgreSQL guarda o histórico, Streamlit é a interface — empacotado com Docker Compose.
+**Solução:** Um supervisor LangGraph encaminha cada mensagem a um agente de pesquisa (assunto e corpo) ou a um agente de e-mail (IMAP do Gmail, resumos e rascunhos). A interface Next.js mostra a caixa e o cartão de revisão: dá para editar assunto, corpo e destinatário, e um pedido seguinte atualiza o mesmo cartão. FastAPI guarda mensagens e rascunhos no PostgreSQL. O SMTP só roda em Confirmar envio.
 
-**Resultado:** Publicado no DigitalOcean App Platform como API, UI Streamlit e PostgreSQL gerenciado.
+**Resultado:** Publicado na DigitalOcean App Platform como API, interface Next.js e PostgreSQL gerenciado. Descartar o rascunho não dispara SMTP.
 
 **[Repositório](https://github.com/OtnielGomes/AI-Agent-with-Docker-Containers-and-Python)**
 

@@ -56,13 +56,13 @@ Currently at [RD Saúde](https://rd.com.br/). Open to **AI Engineering**, **LLM 
 
 ### [AI Agent with Docker, LangGraph & Email](https://github.com/OtnielGomes/AI-Agent-with-Docker-Containers-and-Python)
 
-[![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/langgraph) [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com/langgraph) [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 
-**Problem:** Researching a topic, reading the inbox, and sending a reply is slow when it is done by hand every time.
+**Problem:** Reading the inbox and replying by hand is slow, and the assistant must not be the one that hits send.
 
-**Solution:** A LangGraph supervisor routes work to a research agent and an email agent (Gmail IMAP/SMTP). FastAPI serves the API, PostgreSQL keeps chat history, Streamlit is the UI — packaged with Docker Compose.
+**Solution:** A LangGraph supervisor routes each message to a research agent (subject and plain-text body) or an email agent (Gmail IMAP, summaries, and drafts). The Next.js UI shows the inbox and a review card: subject, body, and recipient can be edited, and a follow-up updates that same card. FastAPI stores messages and drafts in PostgreSQL. SMTP runs only on Confirm send.
 
-**Result:** Deployed on DigitalOcean App Platform as API, Streamlit UI, and managed PostgreSQL.
+**Result:** Deployed on DigitalOcean App Platform as API, Next.js UI, and managed PostgreSQL. Discarding a draft never touches SMTP.
 
 **[Repository](https://github.com/OtnielGomes/AI-Agent-with-Docker-Containers-and-Python)**
 
